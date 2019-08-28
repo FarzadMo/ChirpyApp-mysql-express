@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.use(express.static("./app/public"));
 
-//require("./app/routes/api-routes").app();
+require("./app/routes/api-routes").app();
 
 app.listen(PORT, function(){
     console.log("server is connected on https://localhost/"+ PORT);
