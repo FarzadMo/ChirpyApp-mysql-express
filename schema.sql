@@ -1,0 +1,15 @@
+DROP DATABASE IF EXISTS chirpy;
+
+CREATE DATABASE chirpy;
+
+USE chirpy;
+
+CREATE TABLE chirp (
+    id INT(10) NOT NULL AUTO_INCREMENT,
+    author VARCHAR(255) NOT NULL,
+    body VARCHAR (255) NOT NULL,
+    created_at DATETIME NOT NULL,
+    
+    PRIMARY KEY (id)
+);
+
