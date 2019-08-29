@@ -1,4 +1,4 @@
-var mysql = require ("mysql");
+var mysql = require("mysql");
 
 var connection = mysql.createConnection({
     port: 3306,
@@ -8,9 +8,12 @@ var connection = mysql.createConnection({
     database: "chirpy"
 });
 
-connection.connect(function(err){
-    if(err) {
-        console.log("The error is"+err.stack);
-    } 
-    console.log("connection is connected as" +connection.threadId);
-})
+connection.connect(function (err) {
+    if (err) {
+        console.log("The error is" + err.stack);
+        return;
+    }
+    console.log("connection is connected as" + connection.threadId);
+});
+
+module.exports = connection;
